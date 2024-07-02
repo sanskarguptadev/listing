@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { StrictMode } from 'react';
+import GlobalStyle from './GlobalStyle';
+import ContentList from './components/contentList';
+import Header from './components/header';
 import './App.css';
 
 function App() {
+  const [term, setTerm] = useState('');
+
+  const handleSearch = (term) => {
+    setTerm(term);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StrictMode>
+      <GlobalStyle />
+      <Header onSearch={handleSearch} />
+      <ContentList searchTerm={term} />
+    </StrictMode>
   );
 }
 
