@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
  body {
     background-color: #252537;
     color: #FFFFFF;
-    font-family: 'Titillium Web', 'sans-serif';
+    font-family: 'Titillium Web';
     margin: 0;
     padding: 0;
     box-sizing: border-box;

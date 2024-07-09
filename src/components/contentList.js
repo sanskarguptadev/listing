@@ -11,7 +11,7 @@ const Grid = styled.div`
 `;
 
 const P = styled.p`
-    margin-top: 10%;
+    margin-top: 25%;
     display: flex;
     justify-content: center;
 `;
@@ -46,7 +46,7 @@ const ContentList = ({ searchTerm }) => {
                     />
                     <span>{item.name}</span>
                 </div>
-            )) : <P> Not Found!!! </P> }
+            )) : <P>Not Found!!!</P> }
         </Grid>
     )
 };

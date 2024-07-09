@@ -19,7 +19,7 @@ const HeaderContainer = styled.header`
 const Title = styled.h1`
     flex: 1;
     text-align: center;
-    font-size: 10px;
+    font-size: 15px;
     margin: 0;
 `;
 const Button = styled.button`
