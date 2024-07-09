@@ -41,7 +41,7 @@ const ContentList = ({ searchTerm }) => {
                 <div key={index}>
                     <Image 
                         source={`https://test.create.diagnal.com/images/${item?.['poster-image']}`}
-                        fb={'https://test.create.diagnal.com/images/poster1.jpg'}
+                        fb={'https://test.create.diagnal.com/images/placeholder_for_missing_posters.png'}
                         alt={item.name}
                     />
                     <span>{item.name}</span>
