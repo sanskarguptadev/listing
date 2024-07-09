@@ -32,8 +32,9 @@ const Button = styled.button`
 
 const SearchInput = styled.input`
     position: fixed;
-    top: 10px;
-    right: 50px;
+    width: 80%;
+    top: 5px;
+    right: 5px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -52,16 +53,22 @@ const Header = ({ onSearch }) => {
         setSearchTerm(e.target.value);
         onSearch(e.target.value);
     }
+    
+    const handleClose = () => {
+        setVisible(!visible);
+    }
 
     return (
         <HeaderContainer>
-            <Button>
+            <Button onClick={handleClose}>
                 <FaArrowLeft />
             </Button>
             <Title>Romantic Comedy</Title>
-            <Button onClick={handleSearchClick}>
-                <FaSearch />
-            </Button>
+            { !visible ? 
+                <Button onClick={handleSearchClick}>
+                    <FaSearch />
+                </Button> :
+             null }
             <SearchInput 
                 type="text"
                 placeholder="Search..."
