@@ -56,7 +56,7 @@ const Header = ({ onSearch }) => {
     
     const handleClose = () => {
         setVisible(false);
-        setSearchTerm('');
+        onSearch('');
     }
 
     return (

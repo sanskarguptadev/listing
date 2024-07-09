@@ -11,6 +11,8 @@ function App() {
   const handleSearch = (term) => {
     setTerm(term);
   }
+
+  console.log(term);
   return (
     <StrictMode>
       <GlobalStyle />
