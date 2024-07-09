@@ -10,6 +10,12 @@ const Grid = styled.div`
     padding: 10px;
 `;
 
+const P = styled.p`
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+`;
+
 const ContentList = ({ searchTerm }) => {
     const [page, setPage] = useState(1);
     const { items, loading } = useList(page);
@@ -31,7 +37,7 @@ const ContentList = ({ searchTerm }) => {
 
     return (
         <Grid>
-            {filteredItems.map((item, index) => (
+            { filteredItems.length > 0 ? filteredItems.map((item, index) => (
                 <div key={index}>
                     <Image 
                         source={`https://test.create.diagnal.com/images/${item?.['poster-image']}`}
@@ -40,7 +46,7 @@ const ContentList = ({ searchTerm }) => {
                     />
                     <span>{item.name}</span>
                 </div>
-            ))}
+            )) : <P> Not Found!!! </P> }
         </Grid>
     )
 };
